@@ -1,4 +1,3 @@
-# FULL APRIORI ANALYSIS IN ONE FILE
 import pandas as pd
 from mlxtend.preprocessing import TransactionEncoder
 from mlxtend.frequent_patterns import apriori, association_rules
@@ -53,11 +52,3 @@ rules = rules[['antecedents','consequents','support','confidence','lift']]
 
 print("\nAssociation Rules (Conf ≥ 0.5)")
 print(rules)
-
-# Part C: Interpretation
-# Sorting by lift descending
-top_rules = rules.sort_values(by="lift", ascending=False).head(3)
-
-print("\nTop 3 Strongest Rules (By Lift)")
-print(top_rules)
-
